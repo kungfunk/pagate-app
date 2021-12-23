@@ -1,5 +1,5 @@
-import styles from './App.module.css';
+import "./App.css";
 
-export const App = () => {
-  return <h1 className={styles.title}>test</h1>;
-};
+export function App() {
+  return <h1 className="app-header">test</h1>;
+}
