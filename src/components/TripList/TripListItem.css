@@ -1,0 +1,19 @@
+.TripListItem {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.TripListItem__name {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+.TripListItem__description {
+  color: #666;
+  line-height: 1em;
+}
