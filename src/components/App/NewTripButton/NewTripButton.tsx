@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
+
 import classNames from './NewTripButton.module.css'
 
 export function NewTripButton() {
   return (
-    <a className={classNames.button} href="">
+    <Link className={classNames.button} to="/new-trip">
       Add new Trip
-    </a>
+    </Link>
   )
 }
