@@ -1,6 +1,6 @@
 import { Trip } from '../../types'
 import { TripListItem } from './TripListItem'
-import './TripList.css'
+import classNames from './TripList.module.css'
 
 interface TripList {
   trips: Trip[]
@@ -9,7 +9,7 @@ interface TripList {
 export function TripList({ trips }: TripList) {
   return (
     <nav>
-      <ul className="TripList">
+      <ul className={classNames.list}>
         {trips.map((trip: Trip) => (
           <TripListItem key={trip.id} {...trip} />
         ))}

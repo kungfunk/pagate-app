@@ -1,6 +1,5 @@
 import { Trip } from '../../types'
 import { TripList } from '../TripList/TripList'
-import './App.css'
 import { NewTripButton } from './NewTripButton/NewTripButton'
 
 const mockTrips: Trip[] = [

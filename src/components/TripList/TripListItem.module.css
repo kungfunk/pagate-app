@@ -1,4 +1,4 @@
-.TripListItem {
+.item {
   display: block;
   padding: 10px 20px;
   border-bottom: 1px solid #eee;
@@ -7,13 +7,13 @@
   cursor: pointer;
 }
 
-.TripListItem__name {
+.name {
   margin: 0;
   font-size: 1.3em;
   line-height: 1.3em;
 }
 
-.TripListItem__description {
+.description {
   color: #666;
   line-height: 1em;
 }
