@@ -1,7 +1,11 @@
 import { useParams } from 'react-router-dom'
 
-export function Trip() {
+export function Trip(): JSX.Element {
   const params = useParams()
 
-  return <p>Trip id: {params.id}</p>
+  return (
+    <main>
+      <h1>Trip id: {params.id}</h1>
+    </main>
+  )
 }

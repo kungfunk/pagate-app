@@ -1,15 +1,11 @@
 .button {
   display: block;
   padding: 20px;
-  background-color: lightseagreen;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   text-decoration: none;
   text-align: center;
   font-weight: bold;
   border-radius: 3px;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  right: 30px;
   cursor: pointer;
 }

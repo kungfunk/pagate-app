@@ -1,0 +1,22 @@
+{
+  "trips": [
+    {
+      "id": "1",
+      "name": "trip to france",
+      "description": "oh lala",
+      "expenses": []
+    },
+    {
+      "id": "2",
+      "name": "weekend in disneyland",
+      "description": "🐭 mickey mouse",
+      "expenses": []
+    },
+    {
+      "id": "3",
+      "name": "night club drinks",
+      "description": "what a night, uh",
+      "expenses": []
+    }
+  ]
+}
