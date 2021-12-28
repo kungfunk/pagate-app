@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { NewTrip } from '../NewTrip'
 import { Trip } from '../Trip'
 import { TripList } from '../TripList'
 
@@ -11,10 +12,8 @@ export function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<TripList />} />
-          <Route path="new-trip" element={<div>test</div>} />
-          <Route path="trip">
-            <Route path=":id" element={<Trip />}></Route>
-          </Route>
+          <Route path="trip/:id" element={<Trip />}></Route>
+          <Route path="trip/new" element={<NewTrip />} />
           <Route path="*" element={<code>Error 404</code>} />
         </Routes>
       </BrowserRouter>

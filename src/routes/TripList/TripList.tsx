@@ -6,23 +6,24 @@ import { ErrorMessage } from '../../components/ErrorMessage'
 import { Link } from 'react-router-dom'
 import { Button } from '../../components/Button'
 import { BottomContainer } from '../../components/BottomContent'
+import { getAllTrips } from '../../services/repository'
 
 interface TripList {
   trips: Trip[]
 }
 
 export function TripList(): JSX.Element {
-  const { isLoading, error, data } = useQuery<Trip[], Error>('trips', () =>
-    fetch('/db.json')
-      .then((res) => res.json())
-      .then((data) => data.trips)
-  )
+  const {
+    isLoading,
+    error,
+    data: trips,
+  } = useQuery<Trip[], Error>('trips', getAllTrips)
 
   if (isLoading) {
     return <Loading />
   }
 
-  if (error instanceof Error) {
+  if (error) {
     return <ErrorMessage text={error.message} />
   }
 
@@ -30,8 +31,8 @@ export function TripList(): JSX.Element {
     <>
       <nav>
         <ul className={classNames.list}>
-          {data &&
-            data.map((trip: Trip) => (
+          {trips &&
+            trips.map((trip: Trip) => (
               <li key={trip.id}>
                 <Link className={classNames.item} to={`/trip/${trip.id}`}>
                   <h2 className={classNames.name}>{trip.name}</h2>
@@ -44,7 +45,7 @@ export function TripList(): JSX.Element {
         </ul>
       </nav>
       <BottomContainer>
-        <Button to="/new-trip">Create new Trip!</Button>
+        <Button to="/trip/new">Create new Trip!</Button>
       </BottomContainer>
     </>
   )
